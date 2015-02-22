@@ -1,8 +1,9 @@
-## Put comments here that give an overall description of what your
-## functions do
+## Both makeCacheMatrix() and cacheSolve() are working for the same reason. It is a king of gun/trigger relation
+## as the first function (makeCacheMatrix) initiates a matrix in order to be cacheable and inverted, so long the
+## second function pulls the trigger and inverts the matrix and solves the inversion with a simple comparison.
 
-## Write a short comment describing this function
-
+#makeCacheMatrix(): takes and initiates a matrix placed in variable x and handles the cacheable matrix R
+#for further use.
 
 makeCacheMatrix <- function(x = matrix()) {
   ma <- NULL 
@@ -18,11 +19,12 @@ makeCacheMatrix <- function(x = matrix()) {
        getinvert = getinvert)
 }
 
-## Write a short comment describing this function
+##cacheSolve(): "Activates" as a trigger the cacheable matrix which is placed in the variable ma
+## and after a short check, inverts and returns the cached matrix ma.
 
 
 cacheSolve <- function(x, ...) {
-  ma <- x$getinv() 
+  ma <- x$getinvert() 
   if(!is.null(ma)) { 
     message("getting cached data")
     return(ma) 
