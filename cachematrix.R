@@ -2,6 +2,7 @@
 ## as the first function (makeCacheMatrix) initiates a matrix in order to be cacheable and inverted, so long the
 ## second function pulls the trigger and inverts the matrix and solves the inversion with a simple comparison.
 
+
 #makeCacheMatrix(): takes and initiates a matrix placed in variable x and handles the cacheable matrix R
 #for further use.
 
